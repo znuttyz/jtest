@@ -1,0 +1,64 @@
+.pageBreak {
+	display: block;
+	border-top: 1px solid #dcdcdc;
+	// border-bottom: 1px solid #dcdcdc;
+	
+
+	.footer {
+		padding: 50px 0;
+
+		p {
+			font-size: 12px;
+			font-weight: 100;
+		}
+		
+
+		.footerContainer {
+			display: flex;
+	    	align-items: center;
+	    	justify-content: center;
+	    	padding: 10px 0;
+
+	    	.footerIcon {
+	    		padding: 0 15px;
+
+	    		img {
+	    			filter: grayscale(100%);
+	    			width: 20px;
+	    		}
+	    		img:hover {
+	    			filter: grayscale(0%)
+	    		}
+	    	}
+
+			.footerNav {
+				display: flex;
+				padding: 0 10px;
+				// width: 400px;
+
+				li {
+					cursor: pointer;
+	  				margin: auto;
+	  				padding: 0 10px;
+	  				color: $gray;
+
+	  				a {
+	  					display: inline-block;
+	  				}
+
+	  				&:not(:first-child):before {
+	    				content: "|";
+	    				padding-right: 20px;
+					}
+
+					&:hover {
+						color: $blue;
+					}
+					&:hover:before {
+						color: $gray;
+					}
+				}
+			}
+		}
+	}
+}

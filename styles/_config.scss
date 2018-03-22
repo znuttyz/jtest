@@ -1,0 +1,181 @@
+// @font-face {
+//     font-family: 'kittithada';
+//     src: url('../../fonts/kit55p_1-webfont.woff2') format('woff2'),
+//          url('../../fonts/kit55p_1-webfont.woff') format('woff'),
+//          url('../../fonts/kit55p_1-webfont.svg#kittithada_roman_55_pregular') format('svg');
+//     font-weight: 100;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'kittithada';
+//     src: url('../../fonts/kit65p_1-webfont.woff2') format('woff2'),
+//          url('../../fonts/kit65p_1-webfont.woff') format('woff'),
+//          url('../../fonts/kit65p_1-webfont.svg#kittithada_medium_65_pregular') format('svg');
+//     font-weight: 200;
+//     font-style: normal;
+
+// }
+
+// @font-face {
+//     font-family: 'kittithada';
+//     src: url('../../fonts/kit75p_1-webfont.woff2') format('woff2'),
+//          url('../../fonts/kit75p_1-webfont.woff') format('woff'),
+//          url('../../fonts/kit75p_1-webfont.svg#kittithada_bold_75_pregular') format('svg');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'kittithada', sans-serif;
+	text-rendering: optimizeLegibility;
+	body {
+		margin: 0;
+	}
+}
+
+img {max-width: 100%;}
+
+a, a:active, a:focus, a:hover {
+	outline: none;
+	text-decoration: none;
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+    display: block;
+}
+
+h1,h2,h3,h4,h5,h6,p {margin: 0;}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.clear {clear:both;}
+
+ul {
+	li {
+		list-style: none;
+	}
+}
+
+*:focus {
+    outline: none;
+}
+
+// color
+$green: #29aa49;
+$black: #303030;
+$white: #ffffff;
+$blue: #55acee;
+$gray: #757575;
+
+// breakpoint
+$MQs: true;
+
+// @mixin breakpoint($point) {
+//   	@if ($MQs) {
+// 	    $bp-mobile: "(max-width: 40em)";
+// 	    $bp-tablet: "(max-width: 70em)";
+// 	    $bp-tablet-wide: "(min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1)";
+// 	    $bp-desktop: "(max-width: 100em)";
+// 	    $bp-over: "(min-width: 1460px)";
+
+	  	
+// 	    @if $point == desktop {
+// 	      	@media #{$bp-desktop} { @content; }
+// 	    }
+// 	    @else if $point == tablet {
+// 	      	@media #{$bp-tablet} { @content; }
+// 	    }
+// 	    @else if $point == tablet-wide {
+// 	      	@media #{$bp-tablet-wide} { @content; }
+// 	    }
+// 	    @else if $point == mobile {
+// 	      	@media #{$bp-mobile}  { @content; }
+// 	    }
+// 	    @else if $point == over {
+// 	      	@media #{$bp-over} { @content; }
+// 	    }
+//   	}
+// }
+
+// // clearfix
+// %clearfix {
+// 	*zoom: 1;
+// 	&:before, &:after {
+// 		content: " ";
+// 		display: table;
+// 		clear: both;
+// 	}
+// 	&:after {
+// 		clear: both;
+// 	}
+// }
+
+// // pseudo
+// @mixin pseudo($display: block, $pos: absolute, $content: ''){
+//     content: $content;
+//     display: $display;
+//     position: $pos;
+// }
+
+
+// // Responsive ratio
+// @mixin responsive-ratio($x,$y, $pseudo: false) {
+//     $padding: unquote( ( $y / $x ) * 100 + '%' );
+//     @if $pseudo {
+//         &:before {
+//             @include pseudo($pos: relative);
+//             width: 100%;
+//             padding-top: $padding;
+//         }
+//     } @else {
+//         padding-top: $padding;
+//     }
+// }
+
+// // fontsize
+// @mixin font-size($size) {
+// 	font-size: $size * 1px;
+// 	font-size: $size * 0.1rem;
+// }
+
+// // keyframes
+// @mixin animation($animate...) {
+//     $max: length($animate);
+//     $animations: '';
+
+//     @for $i from 1 through $max {
+//         $animations: #{$animations + nth($animate, $i)};
+
+//         @if $i < $max {
+//             $animations: #{$animations + ", "};
+//         }
+//     }
+//     -webkit-animation: $animations;
+//     -moz-animation:    $animations;
+//     -o-animation:      $animations;
+//     animation:         $animations;
+// }
+
+// @mixin keyframes($animationName) {
+//     @-webkit-keyframes #{$animationName} {
+//         @content;
+//     }
+//     @-moz-keyframes #{$animationName} {
+//         @content;
+//     }
+//     @-o-keyframes #{$animationName} {
+//         @content;
+//     }
+//     @keyframes #{$animationName} {
+//         @content;
+//     }
+// }

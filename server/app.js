@@ -1,4 +1,5 @@
 const express = require('express')
+const helmet = require('helmet')
 const mysql = require("mysql")
 const session = require("express-session")
 const myParser = require("body-parser")
@@ -11,13 +12,14 @@ const language = require('./language')
 const app = express()
 
 // minify the code and remove extra white-space 
-app.use( express.static( `${__dirname}/../build` ) );
+//app.use( express.static( `${__dirname}/../build` ) );
 
+app.use(helmet());
 
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+    res.setHeader('Access-Control-Allow-Origin', 'http://128.199.77.21');
     // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
     // Request methods you wish to allow
@@ -47,6 +49,9 @@ app.use(session({
 // app.get('*', (req, res)=>{
 // 	res.sendFile(path.join(__dirname, '../build/index.html'));
 // })
+app.get('/', (req, res) => {
+  res.send(200);
+});
 
 app.use('/language', language)
 

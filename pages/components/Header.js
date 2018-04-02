@@ -24,7 +24,7 @@ const Header = ({ lang, onHandle }) => {
 		<div className="headerContainer">
 			<div className="headerBox"></div>
 			<div className="headerBox">
-				<a href="/">PHANNURAT GEMS & JEWELRY</a>
+				<a href="/">GEMS & JEWELRY</a>
 			</div>
 			<div className="headerBox">
 				{langBar()}

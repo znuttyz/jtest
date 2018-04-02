@@ -2,8 +2,9 @@ const path = require('path')
 const glob = require('glob') 
 
 module.exports = {
-  webpack: (config, { dev }) => {
-    // Fixes npm packages that depend on `fs` module
+    webpack: (config, { dev }) => {
+    //webpack: (config) => {  
+  // Fixes npm packages that depend on `fs` module
     config.module.rules.push(
       {
         test: /\.(css|scss)/,
@@ -33,6 +34,11 @@ module.exports = {
       }
     )
 
+    if (config.resolve.alias) {
+      delete config.resolve.alias['react']
+      delete config.resolve.alias['react-dom']
+    }
+ 
     return config
   }
 }

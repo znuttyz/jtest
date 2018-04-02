@@ -9,7 +9,7 @@ import {
 	LANG_FOOTER
 } from './types';
 
-axios.defaults.baseURL = 'http://localhost:9000';
+axios.defaults.baseURL = 'http://128.199.77.21:9000';
 // axios.defaults.baseURL = process.env.REACT_APP_API_DOMAIN;
 axios.defaults.withCredentials = true;
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Link from 'next/link'
 import { Head, Title, Albumx3, Albumx4, Footer, Header, Nav2 } from './components';
 // import'isomorphic-unfetch';
+import ReactGA from 'react-ga'
 
 import { bindActionCreators } from 'redux'
 import withRedux from 'next-redux-wrapper'
@@ -55,6 +56,11 @@ class Home extends Component {
     }
   }
 
+  componentDidMount() {
+    ReactGA.initialize('UA-116314248-1');
+    ReactGA.pageview(window.location.pathname);
+  }
+
   handleSetLanguage(lang) {
     console.log('setLanguage', lang)
     this.props.setLanguage(lang, 1);
@@ -84,7 +90,7 @@ class Home extends Component {
       <div>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
 
-        <Head title="PHANNURAT GEMS & JEWELRY"/>
+        <Head title="GEMS & JEWELRY"/>
 
         <Header lang={this.state.lang} onHandle={this.handleSetLanguage.bind(this)}/>
 
